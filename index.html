@@ -25,7 +25,10 @@
     </nav>
 
     <!-- В hero.jpg уже есть фон, человек и слово AURORA (слои «AU» / «RORA») -->
-    <img class="hero__bg" src="images/hero.jpg" alt="Человек в наушниках Aurora Sound X1">
+    <picture class="hero__picture">
+      <source media="(max-width: 720px)" srcset="images/hero-mobile.jpg">
+      <img class="hero__bg" src="images/hero.jpg" alt="Человек в наушниках Aurora Sound X1">
+    </picture>
     <h1 class="visually-hidden">Aurora Sound X1</h1>
 
     <div class="hero__info">

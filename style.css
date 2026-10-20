@@ -323,7 +323,7 @@ main { padding-bottom: var(--gap-section); }
   .hero { height: 100svh; min-height: 640px; max-height: 900px; aspect-ratio: auto; }
   .hero__bg { object-position: 50% center; }
   .hero__logo { display: none; }
-  .hero__menu-toggle { position: absolute; z-index: 10; top: max(14px, env(safe-area-inset-top)); left: 14px; width: 40px; height: 40px; display: flex; flex-direction: column; justify-content: center; gap: 5px; padding: 9px; border: 0; border-radius: 50%; background: transparent; cursor: pointer; }
+  .hero__menu-toggle { position: absolute; z-index: 10; top: max(14px, env(safe-area-inset-top)); left: 14px; width: 44px; height: 44px; display: flex; flex-direction: column; justify-content: center; gap: 5px; padding: 10px; border: 0; border-radius: 50%; background: rgba(255,255,255,.82); cursor: pointer; }
   .hero__menu-toggle span { display: block; width: 22px; height: 1px; background: #222; transition: transform .2s; }
   .hero__menu-toggle[aria-expanded="true"] span:first-child { transform: translateY(3px) rotate(45deg); }
   .hero__menu-toggle[aria-expanded="true"] span:last-child { transform: translateY(-3px) rotate(-45deg); }
@@ -333,8 +333,8 @@ main { padding-bottom: var(--gap-section); }
   .hero__nav a:last-child { border-bottom: 0; }
   .hero__info { left: 24px; right: 24px; bottom: max(30px, env(safe-area-inset-bottom)); max-width: none; }
   .hero__lead, .hero__text { display: none; }
-  .hero__actions { width: min(100%, 200px); margin: 0 auto; gap: 7px; }
-  .hero__actions .btn { height: 36px; padding: 0 12px; border-radius: 7px; font-size: 10px; letter-spacing: .02em; }
+  .hero__actions { width: min(100%, 280px); margin: 0 auto; gap: 10px; }
+  .hero__actions .btn { height: 44px; padding: 0 14px; border-radius: 8px; font-size: 13px; letter-spacing: .02em; }
   .hero__actions .btn--dark { background: #121212; color: #fff; }
   .hero__actions .btn--light { background: #fff; color: #121212; }
 
@@ -378,7 +378,8 @@ main { padding-bottom: var(--gap-section); }
 
   /* Отзывы идут друг за другом и сохраняют читаемую ширину. */
   .scene--listen { min-height: 620px; padding-bottom: 22px; display: flex; flex-direction: column; justify-content: space-between; gap: 28px; }
-  .scene--listen .scene__bg { object-position: 50% 28%; }
+  .scene--listen { background: #121212; }
+  .scene--listen .scene__bg { display: none; }
   .listen__top .h2 { max-width: 12ch; font-size: 38px; line-height: 1.02; }
   .listen__top p { margin-top: 12px; font-size: 11px; line-height: 1.5; }
   .listen__quotes { display: grid; grid-template-columns: 1fr; gap: 18px; }
