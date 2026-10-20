@@ -6,6 +6,8 @@
   const backBtn = document.getElementById("back-btn");
   const select = document.getElementById("f-device");
   const openers = document.querySelectorAll("[data-open-modal]");
+  const menuToggle = document.querySelector(".hero__menu-toggle");
+  const nav = document.getElementById("primary-nav");
   const inputs = form.querySelectorAll("input[required]");
   const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
 
@@ -42,6 +44,19 @@
   }
 
   openers.forEach((btn) => btn.addEventListener("click", openModal));
+
+  function setMenuOpen(open) {
+    menuToggle.setAttribute("aria-expanded", String(open));
+    menuToggle.setAttribute("aria-label", open ? "Закрыть меню" : "Открыть меню");
+    nav.classList.toggle("is-open", open);
+  }
+
+  menuToggle.addEventListener("click", () => {
+    setMenuOpen(menuToggle.getAttribute("aria-expanded") !== "true");
+  });
+  nav.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => setMenuOpen(false));
+  });
   backBtn.addEventListener("click", closeModal);
 
   modal.addEventListener("click", (e) => {
@@ -49,6 +64,7 @@
   });
   document.addEventListener("keydown", (e) => {
     if (e.key === "Escape" && !modal.hidden) closeModal();
+    if (e.key === "Escape" && menuToggle.getAttribute("aria-expanded") === "true") setMenuOpen(false);
   });
 
   inputs.forEach((el) => {

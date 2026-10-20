@@ -16,7 +16,8 @@
   <!-- 1. HERO -->
   <header class="hero" id="top">
     <a class="hero__logo" href="#top">AURORA SOUND X1</a>
-    <nav class="hero__nav" aria-label="Основная навигация">
+    <button class="hero__menu-toggle" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="primary-nav"><span></span><span></span></button>
+    <nav class="hero__nav" id="primary-nav" aria-label="Основная навигация">
       <a href="#contacts">Контакты</a>
       <a href="#model">О модели</a>
       <a href="#design">Дизайн</a>
@@ -30,7 +31,10 @@
     <div class="hero__info">
       <p class="hero__lead">Аудиосистема Hi-Fi нового поколения</p>
       <p class="hero__text">Версия X1 — вершина звукового искусства: кристально-чистые детали, мощный бас и дизайн, который невозможно перепутать.</p>
-      <a class="btn btn--dark" href="#model">Узнать больше</a>
+      <div class="hero__actions">
+        <a class="btn btn--dark" href="#model">Узнать больше</a>
+        <button class="btn btn--light" type="button" data-open-modal>Записаться на предпоказ</button>
+      </div>
     </div>
   </header>
 
