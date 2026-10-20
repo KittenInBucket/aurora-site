@@ -314,4 +314,67 @@ main { padding-bottom: var(--gap-section); }
   .h2 { font-size: 44px; }
   .hero { min-height: 720px; }
   .hero__nav { display: none; }
-  
+  /* Мобильная версия */
+  .hero { min-height: 0; height: min(760px, 100svh); height: max(620px, min(760px, 100svh)); aspect-ratio: auto; }
+  .hero__bg { object-position: 58% center; }
+  .hero__logo { top: 20px; left: 20px; font-size: 13px; color: #222; }
+  .hero__nav { display: none; }
+  .hero__info { left: 20px; right: 20px; bottom: 24px; max-width: 420px; }
+  .hero__lead { font-size: 14px; }
+  .hero__text { margin: 12px 0 16px; font-size: 14px; }
+  .hero .btn { width: min(100%, 253px); }
+
+  :root { --pad-x: 20px; --pad-top: 28px; --gap-section: 56px; }
+  .h2 { font-size: clamp(36px, 9vw, 52px); line-height: 1.04; }
+  .label { font-size: 12px; }
+  .section { padding-left: var(--pad-x); padding-right: var(--pad-x); }
+  .story { display: flex; flex-direction: column; min-height: 0; padding-top: 0; }
+  .story__left { padding-top: 0; padding-bottom: 24px; }
+  .story .h2 { margin-top: 24px; }
+  .story__text { margin-top: 24px; padding-bottom: 0; gap: 16px; font-size: 14px; }
+  .story__right { gap: 16px; }
+  .story__right img { aspect-ratio: 4 / 3; }
+  .story__right .quote { font-size: 14px; }
+
+  .design__grid { grid-template-columns: minmax(0, 1fr); gap: 0; margin-top: 24px; }
+  .design__tiles { aspect-ratio: 1 / 1; }
+  .design__side { padding-top: 24px; gap: 20px; }
+  .design__text { gap: 16px; font-size: 14px; }
+
+  .specs { gap: 40px; }
+  .specs__block { grid-template-columns: minmax(0, 1fr); gap: 16px; }
+  .specs__main .label { margin-bottom: 14px; }
+  .rows li { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 8px 12px; padding: 10px 12px; font-size: 12px; }
+  .rows li span:last-child { max-width: 55%; overflow-wrap: anywhere; }
+  .rows--tech li { display: grid; grid-template-columns: 1fr; gap: 4px; }
+  .rows--tech li span:last-child { max-width: 100%; }
+  .specs__note { font-size: 14px; }
+
+  .scene--timeless { min-height: 620px; aspect-ratio: auto; }
+  .scene--timeless .scene__bg { object-position: 56% center; }
+  .scene--timeless .scene__box { left: var(--pad-x); right: var(--pad-x); bottom: 24px; width: auto; gap: 16px; font-size: 14px; }
+  .scene--timeless .scene__box .btn { width: min(100%, 253px); margin-top: 0; }
+  .scene--listen { min-height: 720px; gap: 32px; padding-bottom: 24px; }
+  .scene--listen .scene__bg { object-position: 60% center; }
+  .listen__top p { margin-top: 16px; font-size: 14px; }
+  .listen__quotes { flex-direction: column; align-items: stretch; gap: 24px; }
+  .review, .review:last-child { width: 100%; font-size: 14px; }
+
+  .cta { min-height: 0; padding-bottom: 0; }
+  .cta__text { margin-top: 16px; max-width: 38rem; font-size: 14px; }
+  .cta__bottom { margin-top: 36px; padding-bottom: 24px; flex-direction: column; align-items: stretch; gap: 28px; }
+  .cta__bottom .btn { width: min(100%, 253px); }
+  .cta__contacts { width: auto; font-size: 14px; overflow-wrap: anywhere; }
+
+  .modal { padding: 12px; }
+  .modal__card { min-height: 0; border-radius: 24px; padding: 20px 14px 24px; }
+  .form, .success { min-height: min(359px, calc(100svh - 100px)); }
+}
+
+@media (max-width: 380px) {
+  :root { --pad-x: 16px; }
+  .hero__logo { left: 16px; }
+  .hero__info { left: 16px; right: 16px; }
+  .h2 { font-size: 36px; }
+  .rows li { font-size: 11px; padding: 9px; }
+}
