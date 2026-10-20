@@ -317,6 +317,7 @@ main { padding-bottom: var(--gap-section); }
   .h2 { font-size: 22px; line-height: 1.05; letter-spacing: -0.01em; }
   .label { font-size: 10px; letter-spacing: .08em; }
   .section { padding-left: var(--pad-x); padding-right: var(--pad-x); }
+  .btn { margin-left: auto; margin-right: auto; }
   main { padding-bottom: 36px; }
 
   /* Первый экран повторяет мобильный макет: портретное фото и две кнопки внизу. */
