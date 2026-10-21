@@ -107,5 +107,16 @@
     }
   });
 
+
+  // На узком экране показываем короткую подпись, чтобы она не обрезалась в поле.
+  const phone = window.matchMedia("(max-width: 720px)");
+  const placeholderOption = select.options[0];
+  const placeholderFull = placeholderOption.textContent;
+  const syncPlaceholder = () => {
+    placeholderOption.textContent = phone.matches ? "Выберите устройство" : placeholderFull;
+  };
+  syncPlaceholder();
+  phone.addEventListener("change", syncPlaceholder);
+
   updateSubmit();
 })();
